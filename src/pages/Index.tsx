@@ -115,30 +115,18 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen flex relative overflow-hidden">
+    <div className="min-h-screen flex relative overflow-hidden bg-gradient-to-br from-slate-600 via-slate-700 to-teal-600">
       <div className="absolute top-4 right-4 z-30">
         <ThemeToggle />
       </div>
       
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/lovable-uploads/7a96682a-47a3-4ed0-8036-8a31ad28cb4b.png" 
-          alt="Pet background" 
-          className="w-full h-full object-cover transition-opacity duration-1000 opacity-80"
-        />
-        <div className="absolute inset-0 backdrop-blur-md bg-petshop-blue/30 dark:bg-gray-900/50"></div>
-      </div>
-      
+      {/* Geometric background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-10">
-        <div className="absolute top-[10%] left-[5%] w-28 h-28 rounded-full bg-petshop-gold dark:bg-amber-500 opacity-20 animate-float"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-40 h-40 rounded-full bg-petshop-gold dark:bg-amber-500 opacity-10 animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-[40%] right-[20%] w-24 h-24 rounded-full bg-petshop-gold dark:bg-amber-500 opacity-15 animate-float" style={{ animationDelay: '2s' }}></div>
-        
-        <PawPrint className="absolute top-[15%] right-[25%] w-16 h-16 text-white opacity-10 animate-bounce" style={{ animationDelay: '1.5s' }} />
-        <PawPrint className="absolute bottom-[30%] left-[15%] w-20 h-20 text-white opacity-10 animate-float" style={{ animationDelay: '2.5s' }} />
-        <PawPrint className="absolute top-[60%] right-[10%] w-12 h-12 text-petshop-gold dark:text-amber-500 opacity-15 animate-pulse" style={{ animationDelay: '0.5s' }} />
-        <Heart className="absolute top-[25%] left-[30%] w-10 h-10 text-petshop-gold dark:text-amber-500 opacity-15 animate-pulse" style={{ animationDelay: '1.2s' }} />
-        <Sparkles className="absolute bottom-[15%] right-[25%] w-14 h-14 text-white opacity-10 animate-pulse" style={{ animationDelay: '1.8s' }} />
+        <div className="absolute top-[15%] left-[8%] w-32 h-32 rounded-full bg-teal-400 opacity-20"></div>
+        <div className="absolute bottom-[25%] right-[15%] w-24 h-24 rounded-lg bg-slate-400 opacity-15 rotate-45"></div>
+        <div className="absolute top-[60%] left-[20%] w-16 h-16 rounded-lg bg-slate-300 opacity-10 rotate-12"></div>
+        <div className="absolute bottom-[40%] right-[8%] w-20 h-20 rounded-full bg-teal-300 opacity-15"></div>
+        <div className="absolute top-[35%] right-[35%] w-12 h-12 rounded-lg bg-slate-200 opacity-10 rotate-45"></div>
       </div>
       
       <div 
@@ -147,47 +135,38 @@ const Index = () => {
         <div className="w-full max-w-md mx-auto">
           <form 
             onSubmit={handleSubmit} 
-            className="glass-card dark:bg-gray-800/40 rounded-2xl p-8 space-y-6 animate-fade-in"
+            className="bg-slate-700/80 rounded-2xl p-8 space-y-6 animate-fade-in shadow-2xl"
             style={{ backdropFilter: "blur(16px)" }}
           >
             <h1 className="text-2xl font-bold text-white text-center mb-2 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              Bem-vindo ao Pet Paradise!
+              Bem-vindo ao Afiliado IA!
             </h1>
             <p className="text-white/80 text-center mb-6 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              Entre para gerenciar seu petshop
+              Entre para gerenciar sua plataforma
             </p>
 
             <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <div className="relative group">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 h-5 w-5 group-hover:text-petshop-gold transition-colors duration-300" />
+              <div>
                 <Input
                   type="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder="teste@gmail.com"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`pl-10 h-12 bg-white/10 dark:bg-gray-700/50 border-white/20 text-white rounded-md transition-all duration-300 hover:border-petshop-gold/50 ${errors.email ? 'border-red-400' : 'focus:border-petshop-gold'}`}
+                  className={`h-12 bg-white border-0 text-gray-900 rounded-md transition-all duration-300 placeholder:text-gray-500 ${errors.email ? 'border-red-400' : 'focus:ring-2 focus:ring-teal-500'}`}
                 />
                 {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
               </div>
 
-              <div className="relative group">
-                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 h-5 w-5 group-hover:text-petshop-gold transition-colors duration-300" />
+              <div>
                 <Input
                   type={showPassword ? "text" : "password"}
                   name="password"
-                  placeholder="Senha"
+                  placeholder="••••••••"
                   value={formData.password}
                   onChange={handleChange}
-                  className={`pl-10 h-12 bg-white/10 dark:bg-gray-700/50 border-white/20 text-white rounded-md transition-all duration-300 hover:border-petshop-gold/50 ${errors.password ? 'border-red-400' : 'focus:border-petshop-gold'}`}
+                  className={`h-12 bg-white border-0 text-gray-900 rounded-md transition-all duration-300 placeholder:text-gray-500 ${errors.password ? 'border-red-400' : 'focus:ring-2 focus:ring-teal-500'}`}
                 />
-                <button 
-                  type="button"
-                  onClick={togglePasswordVisibility}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/60 h-5 w-5 hover:text-petshop-gold transition-colors duration-300"
-                >
-                  {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
-                </button>
                 {errors.password && <p className="text-red-400 text-sm mt-1">{errors.password}</p>}
               </div>
             </div>
@@ -203,7 +182,7 @@ const Index = () => {
                   Lembrar-me
                 </label>
               </div>
-              <a href="#" className="text-sm text-petshop-gold hover:text-white transition-colors duration-300">
+              <a href="#" className="text-sm text-teal-400 hover:text-teal-300 transition-colors duration-300">
                 Esqueceu a senha?
               </a>
             </div>
@@ -211,14 +190,12 @@ const Index = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full button-hover-effect bg-petshop-gold hover:bg-amber-500 text-petshop-blue dark:text-gray-900 font-bold py-3 px-4 rounded-md flex items-center justify-center transition-all duration-300 animate-slide-up"
+              className="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 rounded-md flex items-center justify-center transition-all duration-300 animate-slide-up"
               style={{ animationDelay: '0.6s' }}
             >
               {isLoading ? (
-                <div className="h-5 w-5 border-2 border-petshop-blue dark:border-gray-900 border-t-transparent rounded-full animate-spin mr-2"></div>
-              ) : (
-                <PawPrint className="mr-2 h-5 w-5" />
-              )}
+                <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+              ) : null}
               {isLoading ? "Entrando..." : "Login"}
             </button>
           </form>
