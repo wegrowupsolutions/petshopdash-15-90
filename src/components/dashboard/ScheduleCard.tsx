@@ -13,11 +13,11 @@ const ScheduleCard = () => {
   };
   
   return (
-    <div className="bg-gray-800 rounded-lg p-6 cursor-pointer hover:bg-gray-700 transition-colors" onClick={handleClick}>
+    <div className="bg-white dark:bg-gray-800 rounded-lg p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300 shadow-sm dark:shadow-none" onClick={handleClick}>
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h3 className="text-lg font-semibold text-white">Configurações</h3>
-          <p className="text-sm text-gray-400">Gerenciamento de endpoints</p>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Configurações</h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400">Gerenciamento de endpoints</p>
         </div>
       </div>
       <div className="flex justify-center mb-4">
@@ -27,11 +27,11 @@ const ScheduleCard = () => {
           </svg>
         </div>
       </div>
-      <p className="text-gray-300 text-center mb-4">
+      <p className="text-gray-600 dark:text-gray-300 text-center mb-4">
         Configure os endpoints do sistema e integrações.
       </p>
       <div className="text-center">
-        <span className="text-gray-400 hover:text-gray-300 transition-colors">Gerenciar configurações</span>
+        <span className="text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Gerenciar configurações</span>
       </div>
     </div>
   );

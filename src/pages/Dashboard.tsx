@@ -34,21 +34,21 @@ const Dashboard = () => {
   }
   
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
       <DashboardHeader />
       
       <main className="container mx-auto px-6 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Dashboard Principal</h1>
-          <p className="text-gray-400">Painel de controle do Afiliado IA</p>
+          <p className="text-gray-600 dark:text-gray-400">Painel de controle do Afiliado IA</p>
         </div>
         
         {/* Métrica Total de Leads */}
         <div className="mb-8">
-          <div className="bg-gray-800 rounded-lg p-6 border-l-4 border-teal-500">
-            <h3 className="text-sm font-medium text-gray-400 mb-2">Total de Leads</h3>
-            <div className="text-4xl font-bold mb-1">0</div>
-            <p className="text-sm text-gray-400">+0% do mês passado</p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border-l-4 border-teal-500 shadow-sm dark:shadow-none transition-colors duration-300">
+            <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">Total de Leads</h3>
+            <div className="text-4xl font-bold mb-1 text-gray-900 dark:text-white">0</div>
+            <p className="text-sm text-gray-600 dark:text-gray-400">+0% do mês passado</p>
           </div>
         </div>
         
@@ -64,11 +64,11 @@ const Dashboard = () => {
           <ClientsCard />
           <ChatsCard />
           <ScheduleCard />
-          <div className="bg-gray-800 rounded-lg p-6 cursor-pointer hover:bg-gray-700 transition-colors">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300 shadow-sm dark:shadow-none">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <h3 className="text-lg font-semibold text-white">Academia</h3>
-                <p className="text-sm text-gray-400">Vídeos explicativos da plataforma</p>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Academia</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Vídeos explicativos da plataforma</p>
               </div>
             </div>
             <div className="flex justify-center mb-4">
@@ -78,8 +78,11 @@ const Dashboard = () => {
                 </svg>
               </div>
             </div>
+            <p className="text-gray-600 dark:text-gray-300 text-center mb-4">
+              Acesse vídeos explicativos e tutoriais da plataforma.
+            </p>
             <div className="text-center">
-              <span className="text-purple-400 hover:text-purple-300 transition-colors">Acessar academia</span>
+              <span className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors">Acessar academia</span>
             </div>
           </div>
         </div>

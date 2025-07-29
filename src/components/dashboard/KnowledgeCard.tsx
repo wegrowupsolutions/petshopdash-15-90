@@ -13,11 +13,11 @@ const KnowledgeCard = () => {
   };
   
   return (
-    <div className="bg-gray-800 rounded-lg p-6 cursor-pointer hover:bg-gray-700 transition-colors" onClick={handleClick}>
+    <div className="bg-white dark:bg-gray-800 rounded-lg p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300 shadow-sm dark:shadow-none" onClick={handleClick}>
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h3 className="text-lg font-semibold text-white">Gerenciador de Conhecimento</h3>
-          <p className="text-sm text-gray-400">Documentos e arquivos</p>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Gerenciador de Conhecimento</h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400">Documentos e arquivos</p>
         </div>
       </div>
       <div className="flex justify-center mb-4">
@@ -25,11 +25,11 @@ const KnowledgeCard = () => {
           <Database className="w-12 h-12 text-white" />
         </div>
       </div>
-      <p className="text-gray-300 text-center mb-4">
+      <p className="text-gray-600 dark:text-gray-300 text-center mb-4">
         Gerencie documentos e arquivos da base de conhecimento.
       </p>
       <div className="text-center">
-        <span className="text-orange-400 hover:text-orange-300 transition-colors">Acessar gerenciador</span>
+        <span className="text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors">Acessar gerenciador</span>
       </div>
     </div>
   );
