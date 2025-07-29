@@ -13,32 +13,25 @@ const EvolutionCard = () => {
   };
   
   return (
-    <Card className="cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl dark:bg-gray-800 dark:border-gray-700 dark:text-white" onClick={handleClick}>
-      <CardHeader className="pb-2 bg-gradient-to-r from-blue-400 to-cyan-500 dark:from-blue-500 dark:to-cyan-600 text-white rounded-t-lg">
-        <CardTitle className="flex items-center gap-2">
-          <Link className="h-6 w-6" />
-          Evolution
-        </CardTitle>
-        <CardDescription className="text-blue-100">
-          Conectar e sincronizar
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="pt-6">
-        <div className="mb-4 flex justify-center">
-          <div className="bg-blue-100 dark:bg-blue-900/30 p-6 rounded-full">
-            <Link className="h-14 w-14 text-blue-500 dark:text-blue-400 animate-pulse" />
-          </div>
+    <div className="bg-gray-800 rounded-lg p-6 cursor-pointer hover:bg-gray-700 transition-colors" onClick={handleClick}>
+      <div className="flex items-center justify-between mb-4">
+        <div>
+          <h3 className="text-lg font-semibold text-white">Conectar WhatsApp</h3>
+          <p className="text-sm text-gray-400">Conectar e sincronizar</p>
         </div>
-        <p className="text-gray-600 dark:text-gray-300 text-center">
-          Conecte e sincronize seu sistema com a plataforma Evolution.
-        </p>
-      </CardContent>
-      <CardFooter className="bg-gray-50 dark:bg-gray-700/50 rounded-b-lg border-t dark:border-gray-700 flex justify-center py-3">
-        <Badge variant="outline" className="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-800/50">
-          Conectar Evolution
-        </Badge>
-      </CardFooter>
-    </Card>
+      </div>
+      <div className="flex justify-center mb-4">
+        <div className="bg-blue-500 p-6 rounded-full">
+          <Link className="w-12 h-12 text-white" />
+        </div>
+      </div>
+      <p className="text-gray-300 text-center mb-4">
+        Conecte e sincronize seu sistema com a plataforma Evolution.
+      </p>
+      <div className="text-center">
+        <span className="text-blue-400 hover:text-blue-300 transition-colors">Conectar Whatsapp</span>
+      </div>
+    </div>
   );
 };
 

@@ -13,32 +13,25 @@ const ChatsCard = () => {
   };
   
   return (
-    <Card className="cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl dark:bg-gray-800 dark:border-gray-700 dark:text-white" onClick={handleClick}>
-      <CardHeader className="pb-2 bg-gradient-to-r from-green-500 to-green-600 dark:from-green-600 dark:to-green-700 text-white rounded-t-lg">
-        <CardTitle className="flex items-center gap-2">
-          <MessageSquare className="h-6 w-6" />
-          Chats
-        </CardTitle>
-        <CardDescription className="text-green-100">
-          Conversas em tempo real
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="pt-6">
-        <div className="mb-4 flex justify-center">
-          <div className="bg-green-100 dark:bg-green-900/30 p-6 rounded-full">
-            <MessageSquare className="h-14 w-14 text-green-500 dark:text-green-400 animate-pulse" />
-          </div>
+    <div className="bg-gray-800 rounded-lg p-6 cursor-pointer hover:bg-gray-700 transition-colors" onClick={handleClick}>
+      <div className="flex items-center justify-between mb-4">
+        <div>
+          <h3 className="text-lg font-semibold text-white">Chats</h3>
+          <p className="text-sm text-gray-400">Conversas em tempo real</p>
         </div>
-        <p className="text-gray-600 dark:text-gray-300 text-center">
-          Visualize e responda mensagens de WhatsApp em tempo real.
-        </p>
-      </CardContent>
-      <CardFooter className="bg-gray-50 dark:bg-gray-700/50 rounded-b-lg border-t dark:border-gray-700 flex justify-center py-3">
-        <Badge variant="outline" className="bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-300 hover:bg-green-100 dark:hover:bg-green-800/50">
-          Acessar conversas
-        </Badge>
-      </CardFooter>
-    </Card>
+      </div>
+      <div className="flex justify-center mb-4">
+        <div className="bg-green-500 p-6 rounded-full">
+          <MessageSquare className="w-12 h-12 text-white" />
+        </div>
+      </div>
+      <p className="text-gray-300 text-center mb-4">
+        Visualize e responda mensagens de WhatsApp em tempo real.
+      </p>
+      <div className="text-center">
+        <span className="text-green-400 hover:text-green-300 transition-colors">Acessar conversas</span>
+      </div>
+    </div>
   );
 };
 
