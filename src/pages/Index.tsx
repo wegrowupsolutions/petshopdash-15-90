@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import { Input } from '@/components/ui/input';
-import { PawPrint, Mail, Lock, Eye, EyeOff, Heart, Sparkles } from 'lucide-react';
+import { PawPrint, Mail, Lock, Eye, EyeOff, Heart, Sparkles, Brain, Cpu, Monitor, Code, Bot, Network, Zap, Database } from 'lucide-react';
 import { z } from 'zod';
 import { useAuth } from '@/context/AuthContext';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -120,13 +120,22 @@ const Index = () => {
         <ThemeToggle />
       </div>
       
-      {/* Geometric background elements */}
+      {/* Technology and AI background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-10">
-        <div className="absolute top-[15%] left-[8%] w-32 h-32 rounded-full bg-teal-400 opacity-20"></div>
-        <div className="absolute bottom-[25%] right-[15%] w-24 h-24 rounded-lg bg-slate-400 opacity-15 rotate-45"></div>
-        <div className="absolute top-[60%] left-[20%] w-16 h-16 rounded-lg bg-slate-300 opacity-10 rotate-12"></div>
-        <div className="absolute bottom-[40%] right-[8%] w-20 h-20 rounded-full bg-teal-300 opacity-15"></div>
-        <div className="absolute top-[35%] right-[35%] w-12 h-12 rounded-lg bg-slate-200 opacity-10 rotate-45"></div>
+        {/* AI and Tech Icons */}
+        <Brain className="absolute top-[12%] left-[8%] w-20 h-20 text-teal-400 opacity-25 animate-pulse" style={{ animationDelay: '0.5s' }} />
+        <Cpu className="absolute bottom-[20%] right-[12%] w-16 h-16 text-slate-300 opacity-20 animate-bounce" style={{ animationDelay: '1s' }} />
+        <Monitor className="absolute top-[55%] left-[15%] w-14 h-14 text-teal-300 opacity-15 animate-pulse" style={{ animationDelay: '1.5s' }} />
+        <Code className="absolute top-[30%] right-[25%] w-18 h-18 text-slate-400 opacity-20 animate-pulse" style={{ animationDelay: '0.8s' }} />
+        <Bot className="absolute bottom-[35%] left-[5%] w-12 h-12 text-teal-500 opacity-30 animate-bounce" style={{ animationDelay: '2s' }} />
+        <Network className="absolute top-[25%] left-[25%] w-10 h-10 text-slate-300 opacity-15 animate-pulse" style={{ animationDelay: '1.2s' }} />
+        <Zap className="absolute bottom-[15%] right-[30%] w-14 h-14 text-teal-400 opacity-20 animate-bounce" style={{ animationDelay: '1.8s' }} />
+        <Database className="absolute top-[70%] right-[8%] w-16 h-16 text-slate-400 opacity-15 animate-pulse" style={{ animationDelay: '0.3s' }} />
+        
+        {/* Geometric accent elements */}
+        <div className="absolute top-[18%] right-[15%] w-8 h-8 rounded-full bg-teal-400 opacity-20 animate-ping" style={{ animationDelay: '2.5s' }}></div>
+        <div className="absolute bottom-[45%] right-[20%] w-6 h-6 rounded-lg bg-slate-300 opacity-15 rotate-45 animate-spin" style={{ animationDuration: '8s', animationDelay: '1s' }}></div>
+        <div className="absolute top-[45%] left-[35%] w-4 h-4 rounded-full bg-teal-300 opacity-25 animate-ping" style={{ animationDelay: '3s' }}></div>
       </div>
       
       <div 
